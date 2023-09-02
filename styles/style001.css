@@ -1,0 +1,310 @@
+html,
+body {
+  height: 100%;
+  width: 100%;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  background-color: white;
+}
+
+body {
+  position: relative;
+}
+
+header,
+footer {
+  width: 100%;
+  height: 30px;
+  border-bottom: 1px solid blue;
+}
+
+header {
+  display: flex;
+  align-items: center;
+}
+header .header-wrapper {
+  height: 100%;
+  width: 100%;
+  margin-right: 20px;
+  margin-left: 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.bold {
+  font-weight: bold;
+}
+
+.italic {
+  font-style: oblique;
+}
+
+footer {
+  height: 20px;
+  border-bottom: 0;
+  border-top: 1px solid blue;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 15px;
+}
+footer .copyright {
+  margin-left: 10px;
+}
+footer .lyncdigit {
+  margin-right: 10px;
+}
+footer .lyncdigit a {
+  color: black;
+  cursor: pointer;
+}
+footer .lyncdigit a:hover {
+  color: blue;
+}
+
+a {
+  all: unset;
+  cursor: pointer;
+}
+
+section {
+  height: calc(100% - 50px);
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+}
+section .login-section {
+  height: 100%;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+section .login-section form {
+  width: 250px;
+  height: auto;
+  padding: 20px;
+  border-radius: 8px;
+  border: 2px solid blue;
+}
+section .login-section form h1 {
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  height: auto;
+  text-align: center;
+  text-transform: uppercase;
+  margin-bottom: 10px;
+  padding-bottom: 10px;
+  border-bottom: 1px solid blue;
+}
+section .login-section form input {
+  height: auto;
+  width: calc(100% - 20px);
+  padding: 8px;
+  margin-bottom: 10px;
+  outline: none;
+  border: 1px solid blue;
+}
+section .login-section form input[type=text] {
+  color: blue;
+  font-weight: bold;
+}
+section .login-section form input[type=submit] {
+  width: 250px !important;
+  color: white;
+  background-color: blue;
+  cursor: pointer;
+}
+section .login-section form input[type=submit]:hover {
+  color: blue;
+  background-color: white;
+}
+section .sidebar {
+  width: 20%;
+  height: 100%;
+  border-right: 1px solid blue;
+}
+section .sidebar li {
+  cursor: pointer;
+  margin-bottom: 10px;
+}
+section .sidebar li:hover {
+  color: blue;
+}
+section .tms-main-container {
+  width: calc(80% - 60px);
+  height: calc(100% - 60px);
+  padding: 30px;
+  overflow-y: auto;
+}
+section .tms-main-container .task-posts-container {
+  height: auto;
+  width: 100%;
+  margin-top: 20px;
+  display: flex;
+  flex-direction: column;
+}
+section .tms-main-container .task-posts-container .a-task-post-wrapper {
+  padding: 20px;
+  width: calc(100% - 40px);
+  height: auto;
+  overflow: hidden;
+  margin-bottom: 20px;
+  border-radius: 8px;
+  border: 1px solid blue;
+}
+section .tms-main-container .task-posts-container .a-task-post-wrapper:hover {
+  border-color: black;
+  color: blue;
+}
+section .tms-main-container .task-posts-container .a-task-post-wrapper .task-post-title {
+  font-size: 18px;
+}
+section .tms-main-container .task-posts-container .a-task-post-wrapper .task-post-description {
+  font-size: 15px;
+  text-align: justify;
+}
+section .tms-main-container .task-posts-container .a-task-post-wrapper .status {
+  height: auto;
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+section .tms-main-container .task-posts-container .form-container {
+  height: auto;
+  width: calc(100% - 40px);
+  padding: 20px;
+  border: 1px solid blue;
+  border-radius: 8px;
+}
+section .tms-main-container .task-posts-container .form-container .inputs-control {
+  width: calc(100% - 40px);
+  height: auto;
+  display: flex;
+  flex-direction: column;
+  margin: 20px;
+}
+section .tms-main-container .task-posts-container .form-container .inputs-control label {
+  height: auto;
+  width: 100%;
+  font-size: 20px;
+  margin-bottom: 10px;
+}
+section .tms-main-container .task-posts-container .form-container .inputs-control input,
+section .tms-main-container .task-posts-container .form-container .inputs-control textarea {
+  height: auto;
+  padding: 15px;
+  width: calc(100% - 30px);
+  border: 0.5px solid black;
+  outline: none;
+  font-size: 20px;
+  border-radius: 8px;
+}
+section .tms-main-container .task-posts-container .form-container .inputs-control input:focus,
+section .tms-main-container .task-posts-container .form-container .inputs-control textarea:focus {
+  border-color: blue;
+}
+section .tms-main-container .task-posts-container .form-container .inputs-control textarea {
+  height: 100px;
+  resize: vertical;
+}
+section .tms-main-container .task-posts-container .form-container .inputs-control button {
+  height: 40px;
+  width: -webkit-max-content;
+  width: -moz-max-content;
+  width: max-content;
+  padding: 10px;
+  background-color: white;
+  color: blue;
+  font-weight: bolder;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: 1px solid blue;
+  border-radius: 8px;
+  font-size: 20px;
+  transition: 0.5s ease-in-out;
+  cursor: pointer;
+}
+section .tms-main-container .task-posts-container .form-container .inputs-control button:hover {
+  background-color: blue;
+  color: white;
+}
+section .tms-main-container .task-posts-container .form-container .checkbox-control {
+  flex-direction: row;
+  align-items: center;
+}
+section .tms-main-container .task-posts-container .form-container .checkbox-control input {
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+}
+section .tms-main-container .task-posts-container .form-container .checkbox-control label {
+  width: -webkit-max-content;
+  width: -moz-max-content;
+  width: max-content;
+  height: -webkit-max-content;
+  height: -moz-max-content;
+  height: max-content;
+  margin-left: 20px;
+  display: flex-box;
+  align-items: center;
+  margin-top: 3px;
+}
+section .tms-main-container .task-posts-container table {
+  width: 100%;
+  border-collapse: collapse;
+}
+section .tms-main-container .task-posts-container table tr {
+  text-align: center;
+}
+section .tms-main-container .task-posts-container table tr img {
+  width: 200px;
+  height: 200px;
+  cursor: pointer;
+}
+section .tms-main-container .task-posts-container table th,
+section .tms-main-container .task-posts-container table td {
+  border: 1px solid blue;
+  padding: 15px;
+}
+section .tms-main-container .task-posts-container table th .actions-column,
+section .tms-main-container .task-posts-container table td .actions-column {
+  display: flex;
+  flex-direction: column;
+}
+section .tms-main-container .task-posts-container table th .actions-column i,
+section .tms-main-container .task-posts-container table td .actions-column i {
+  color: blue;
+  font-size: 25px;
+  margin-bottom: 10px;
+  cursor: pointer;
+}
+section .tms-main-container .task-posts-container table th .actions-column i:hover,
+section .tms-main-container .task-posts-container table td .actions-column i:hover {
+  color: rgb(71, 71, 212);
+}
+section .tms-main-container .task-posts-container table th .actions-column .remove-circle,
+section .tms-main-container .task-posts-container table td .actions-column .remove-circle {
+  color: red;
+}
+section .tms-main-container .task-posts-container table th .actions-column .remove-circle:hover,
+section .tms-main-container .task-posts-container table td .actions-column .remove-circle:hover {
+  color: rgb(204, 47, 47);
+}
+section .tms-main-container .task-posts-container table th .actions-column .edit-square,
+section .tms-main-container .task-posts-container table td .actions-column .edit-square {
+  color: green;
+}
+section .tms-main-container .task-posts-container table th .actions-column .edit-square:hover,
+section .tms-main-container .task-posts-container table td .actions-column .edit-square:hover {
+  color: rgb(56, 153, 56);
+}/*# sourceMappingURL=style001.css.map */

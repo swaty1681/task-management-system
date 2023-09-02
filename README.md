@@ -1,2 +1,2 @@
 # task-management-system
-A PHP based Task Management System
+TMS or Task Management System is a software that manages tasks and works!

@@ -1,0 +1,351 @@
+$max-modal-container-width: 30%;
+$blue: blue;
+$black: black;
+$white: white;
+
+html,
+body {
+    height: 100%;
+    width: 100%;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    background-color: $white;
+}
+
+body {
+    position: relative;
+}
+
+header,
+footer {
+    width: 100%;
+    height: 30px;
+    border-bottom: 1px solid $blue;
+}
+
+header {
+    display: flex;
+    align-items: center;
+
+    .header-wrapper {
+        height: 100%;
+        width: 100%;
+        margin-right: 20px;
+        margin-left: 20px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+}
+
+.bold {
+    font-weight: bold;
+}
+
+.italic {
+    font-style: oblique;
+}
+
+footer {
+    height: 20px;
+    border-bottom: 0;
+    border-top: 1px solid $blue;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 15px;
+
+    .copyright {
+        margin-left: 10px;
+    }
+
+    .lyncdigit {
+        margin-right: 10px;
+
+        a {
+            color: $black;
+            cursor: pointer;
+
+            &:hover {
+                color: $blue;
+            }
+        }
+    }
+}
+
+a {
+    all: unset;
+    cursor: pointer;
+}
+
+
+section {
+    height: calc(100% - (30px + 20px));
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+
+    // login section start
+    .login-section {
+        height: 100%;
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+
+        form {
+            width: 250px;
+            height: auto;
+            padding: 20px;
+            border-radius: 8px;
+            border: 2px solid $blue;
+
+            h1 {
+                margin: 0;
+                padding: 0;
+                width: 100%;
+                height: auto;
+                text-align: center;
+                text-transform: uppercase;
+                margin-bottom: 10px;
+                padding-bottom: 10px;
+                border-bottom: 1px solid $blue;
+            }
+
+            input {
+                height: auto;
+                width: calc(100% - 2 *10px);
+                padding: 8px;
+                margin-bottom: 10px;
+                outline: none;
+                border: 1px solid $blue;
+            }
+
+            input[type="text"] {
+                color: $blue;
+                font-weight: bold;
+            }
+
+            input[type="submit"] {
+                width: 250px !important;
+                color: $white;
+                background-color: $blue;
+                cursor: pointer;
+
+                &:hover {
+                    color: $blue;
+                    background-color: $white;
+                }
+            }
+        }
+    }
+
+    // login section end
+
+    .sidebar {
+        width: 20%;
+        height: 100%;
+        border-right: 1px solid $blue;
+
+        li {
+            cursor: pointer;
+            margin-bottom: 10px;
+
+            &:hover {
+                color: $blue;
+            }
+        }
+
+    }
+
+    .tms-main-container {
+        width: calc(80% - 2 * 30px);
+        height: calc(100% - 2 * 30px);
+        padding: 30px;
+        overflow-y: auto;
+
+        .task-posts-container {
+            height: auto;
+            width: 100%;
+            margin-top: 20px;
+            display: flex;
+            flex-direction: column;
+
+            .a-task-post-wrapper {
+                padding: 20px;
+                width: calc(100% - 2 * 20px);
+                height: auto;
+                overflow: hidden;
+                margin-bottom: 20px;
+                border-radius: 8px;
+                border: 1px solid $blue;
+
+                &:hover {
+                    border-color: $black;
+                    color: $blue;
+                }
+
+                .task-post-title {
+                    font-size: 18px;
+                }
+
+                .task-post-description {
+                    font-size: 15px;
+                    text-align: justify;
+                }
+
+                .status {
+                    height: auto;
+                    width: 100%;
+                    display: flex;
+                    flex-direction: row;
+                    justify-content: space-between;
+                }
+            }
+
+            .form-container {
+                height: auto;
+                width: calc(100% - 2 * 20px);
+                padding: 20px;
+                border: 1px solid $blue;
+                border-radius: 8px;
+
+                .inputs-control {
+                    width: calc(100% - 2 * 20px);
+                    height: auto;
+                    display: flex;
+                    flex-direction: column;
+                    margin: 20px;
+
+                    label {
+                        height: auto;
+                        width: 100%;
+                        font-size: 20px;
+                        margin-bottom: 10px;
+                    }
+
+                    input,
+                    textarea {
+                        height: auto;
+                        padding: 15px;
+                        width: calc(100% - 2 * 15px);
+                        border: 0.5px solid $black;
+                        outline: none;
+                        font-size: 20px;
+                        border-radius: 8px;
+
+                        &:focus {
+                            border-color: $blue;
+                        }
+
+                    }
+
+                    textarea {
+                        height: 100px;
+                        resize: vertical;
+                    }
+
+                    button{
+                        height: 40px;
+                        width: max-content;
+                        padding: 10px;
+                        background-color: $white;
+                        color: $blue;
+                        font-weight: bolder;
+                        display: flex;
+                        justify-content: center;
+                        align-items: center;
+                        border: 1px solid $blue;
+                        border-radius: 8px;
+                        font-size: 20px;
+                        transition: 0.5s ease-in-out;
+                        cursor: pointer;
+
+                        &:hover{
+                            background-color: $blue;
+                            color: $white;
+                        }
+                    }
+                }
+
+                .checkbox-control{
+                    flex-direction: row;
+                    align-items: center;
+
+                    input{
+                        width: 30px;
+                        height: 30px;
+                        border-radius: 50%;
+                    }
+
+                    label{
+                        width: max-content;
+                        height: max-content;
+                        margin-left: 20px;
+                        display: flex-box;
+                        align-items: center;
+                        margin-top: 3px;
+                    }
+                }
+            }
+
+            table {
+                width: 100%;
+                border-collapse: collapse;
+    
+                tr {
+                    text-align: center;
+    
+                    img {
+                        width: 200px;
+                        height: 200px;
+                        cursor: pointer;
+                    }
+                }
+    
+                th,
+                td {
+                    border: 1px solid blue;
+                    padding: 15px;
+    
+                    .actions-column {
+    
+                        display: flex;
+                        flex-direction: column;
+    
+                        i {
+                            color: blue;
+                            font-size: 25px;
+                            margin-bottom: 10px;
+                            cursor: pointer;
+    
+                            &:hover{
+                              color: rgb(71, 71, 212);  
+                            }
+                        }
+    
+                        .remove-circle{
+                            color: red;
+                            &:hover{
+                                color: rgb(204, 47, 47);
+                            }
+                        }
+    
+                        .edit-square{
+                            color: green;
+                            &:hover{
+                                color: rgb(56, 153, 56);
+                            }
+                        }
+                    }
+                }
+    
+            }
+        }
+    }
+}
